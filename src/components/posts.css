@@ -1,0 +1,9 @@
+.title {
+    background-color: #3f51b5;
+    color: #fff;
+}
+
+.posts {
+    border: 1px solid lightgray;
+    padding: 1em;
+}
