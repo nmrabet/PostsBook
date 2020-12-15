@@ -2,16 +2,16 @@ import React from "react";
 import Posts from "./components/Posts";
 import "./App.css";
 import Comments from "./components/Comments";
-import { BrowserRouter as Router } from "react-router-dom";
-import {Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
   return (
-    <div className='App'>
+    <div className='app'>
       <Router>
         <Switch>
-          <Route exact path='/'><Posts /></Route>
-          <Route path='/comments'><Comments /></Route>
+          <Route exact path='/posts' component={Posts} />
+          <Route path='/posts/:postsId' component={Comments} />
+          <Redirect to='/posts' />
         </Switch>
       </Router>
     </div>

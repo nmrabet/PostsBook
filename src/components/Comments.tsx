@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react'
+import {useParams} from 'react-router-dom'
 
 export default function Comments() {
+  const commentId = useParams()
+  console.log(commentId)
+
   const [comments, setComments] = useState([])
 
   const url= "https://jsonplaceholder.typicode.com/comments"
@@ -12,6 +16,9 @@ export default function Comments() {
 }, [])
 
   console.log(comments);
+  const thisComment = comments.find(comment => comment._id === commentId)
+  console.log(thisComment)
+
 
   const allComments = comments.map(comment => 
     <div className='posts'>

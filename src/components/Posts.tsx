@@ -17,7 +17,7 @@ export default function Posts() {
 
   const allData = data.map(post => 
       <div className='posts'>
-          <Link to='/comments'><h4 key={post.title}>{post.title}</h4></Link>
+          <Link to={`/posts/${post._id}`}><h4 key={post.title}>{post.title}</h4></Link>
           <p key={post.body}>{post.body}</p>
       </div>)
   
