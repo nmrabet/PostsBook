@@ -1,15 +1,15 @@
 import React from "react";
 import "./profile.css";
 import userphoto from "../assets/userphoto.jpg";
+import {Link} from 'react-router-dom';
 
 export default function Profile() {
   return (
     <div>
-      <h1 className='title'>PostsBook</h1>
       <div className='navbar'>
         <ul className='nav-list'>
           <li>Home</li>
-          <li>Posts</li>
+          <Link to='/posts' className='links'><li>Posts</li></Link>
           <li>Friends</li>
           <li>Todos</li>
           <li>Photos</li>

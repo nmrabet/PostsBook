@@ -11,6 +11,11 @@
   margin-top: 1em;
 }
 
+.links {
+  text-decoration: none;
+  color: #676868;
+}
+
 .nav-list {
   margin: 0 auto;
   display: flex;
@@ -31,3 +36,5 @@
   background-color: #ededee;
   border-radius: 10px;
 }
+
+
