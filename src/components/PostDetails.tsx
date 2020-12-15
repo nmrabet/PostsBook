@@ -18,8 +18,8 @@ export default function PostDetails() {
       .then((res) => res.json())
       .then((data: Comment[]) => {
         setComments(data);
-      });
-  }, []);
+      })
+  }, [url]);
 
   return (
     <div className='comments'>

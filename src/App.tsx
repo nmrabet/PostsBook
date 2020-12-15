@@ -3,7 +3,7 @@ import Posts from "./components/Posts";
 import Profile from './components/Profile';
 import "./App.css";
 import PostDetails from "./components/PostDetails";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (

@@ -17,14 +17,14 @@ export default function Posts() {
   }, []);
 
   return (
-    <div>
+    <div className='posts'>
       {posts.map((post) => {
         return (
           <div>
             <Link to={`/posts/${post.id}`}>
-              <h3>{post.title}</h3>
+              <h3 key={post.title}>{post.title}</h3>
             </Link>
-            <p>{post.body}</p>
+            <p key={post.body}>{post.body}</p>
           </div>
         );
       })}
