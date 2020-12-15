@@ -23,7 +23,6 @@ export default function PostDetails() {
 
   return (
     <div className='comments'>
-      <h1 className='title'>PostsBook</h1>
       {comments.map((comment) => {
         return (
           <div>

@@ -18,7 +18,6 @@ export default function Posts() {
 
   return (
     <div>
-      <h1 className='title'>PostsBook</h1>
       {posts.map((post) => {
         return (
           <div>
