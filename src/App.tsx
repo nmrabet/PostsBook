@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 function App() {
   return (
     <div className='app'>
+      <h1 className='title'>PostsBook</h1>
       <Router>
         <Switch>
           <Route exact path="/" component={Profile}/>
