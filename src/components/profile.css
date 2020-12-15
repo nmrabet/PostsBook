@@ -1,37 +1,33 @@
 .profile {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .img {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 1em;
 }
 
 .nav-list {
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    color: #676868;
-    font-weight: 650;
-    border-top: #676868 solid 1px;
-    border-bottom: #676868 solid 1px;
-    width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  color: #676868;
+  font-weight: 650;
+  border-top: #676868 solid 1px;
+  border-bottom: #676868 solid 1px;
 }
 
 .nav-list li {
-    cursor: pointer;
-    padding: 0.5em;
+  cursor: pointer;
+  padding: 0.5em;
 }
 
 .nav-list li:hover {
-    background-color: #ededee;
-    border-radius: 10px;
+  background-color: #ededee;
+  border-radius: 10px;
 }
-

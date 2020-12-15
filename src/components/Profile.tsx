@@ -9,8 +9,9 @@ export default function Profile() {
       <div className='navbar'>
         <ul className='nav-list'>
           <li>Home</li>
-          <li>About</li>
+          <li>Posts</li>
           <li>Friends</li>
+          <li>Todos</li>
           <li>Photos</li>
         </ul>
       </div>
