@@ -3,7 +3,7 @@ import { Comment } from "../types/comment";
 import { useParams } from "react-router-dom";
 
 export default function PostDetails() {
-  const params = useParams <{ postId }>();
+  const params = useParams <{ postId: string }>();
   console.log(params);
 
 
