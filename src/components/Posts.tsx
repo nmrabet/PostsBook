@@ -18,6 +18,7 @@ export default function Posts() {
 
   return (
     <div className='posts'>
+      <h2 className='subtitle'> Posts </h2>
       {posts.map((post) => {
         return (
           <div key={post.userId}>

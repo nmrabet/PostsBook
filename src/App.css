@@ -10,3 +10,7 @@ body {
   margin: 0 auto;
   margin-bottom: 1em;
 }
+
+.subtitle {
+  text-align: center;
+}

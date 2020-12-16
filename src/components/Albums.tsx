@@ -16,7 +16,8 @@ export default function Albums() {
   }, [url]);
 
   return (
-      <div>
+      <div className='albums-component'>
+        <h2 className='subtitle'> Albums </h2>
           {albums.map((album) => {
               return (<div>
                   <Link to={`/albums/${album.id}`}>
