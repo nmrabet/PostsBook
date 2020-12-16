@@ -3,8 +3,9 @@ import { Comment } from "../types/comment";
 import { useParams } from "react-router-dom";
 
 export default function PostDetails() {
-  const params = useParams<{ postId: string }>();
+  const params = useParams <{ postId }>();
   console.log(params);
+
 
   const [comments, setComments] = useState<Comment[]>([]);
 
@@ -18,7 +19,7 @@ export default function PostDetails() {
       .then((res) => res.json())
       .then((data: Comment[]) => {
         setComments(data);
-      })
+      });
   }, [url]);
 
   return (

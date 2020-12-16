@@ -12,7 +12,7 @@ export default function Profile() {
           <Link to='/posts' className='links'><li>Posts</li></Link>
           <li>Friends</li>
           <li>Todos</li>
-          <li>Photos</li>
+          <Link to='/albums' className='links'><li>Albums</li></Link>
         </ul>
       </div>
       <div className='profile'>
