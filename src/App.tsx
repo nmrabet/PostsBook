@@ -4,13 +4,14 @@ import Profile from './components/Profile';
 import "./App.css";
 import PostDetails from "./components/PostDetails";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {Link} from 'react-router-dom';
 import Albums from "./components/Albums";
 
 function App() {
   return (
     <div className='app'>
-      <h1 className='title'>PostsBook</h1>
       <Router>
+      <Link to='/' style={{ textDecoration: 'none' }}><h1 className='title'>PostsBook</h1></Link>
         <Switch>
           <Route exact path="/" component={Profile}/>
           <Route path='/albums' component={Albums}/>
