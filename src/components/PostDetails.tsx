@@ -3,9 +3,8 @@ import { Comment } from "../types/comment";
 import { useParams } from "react-router-dom";
 
 export default function PostDetails() {
-  const params = useParams <{ postId: string }>();
+  const params = useParams<{ postId: string }>();
   console.log(params);
-
 
   const [comments, setComments] = useState<Comment[]>([]);
 
@@ -27,7 +26,6 @@ export default function PostDetails() {
       {comments.map((comment) => {
         return (
           <div>
-            <h4 key={comment.id}>{comment.id}</h4>
             <h4 key={comment.email}>{comment.email}</h4>
             <p key={comment.body}>{comment.body}</p>
           </div>
