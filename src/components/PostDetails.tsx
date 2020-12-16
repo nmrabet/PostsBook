@@ -25,9 +25,9 @@ export default function PostDetails() {
     <div className='comments'>
       {comments.map((comment) => {
         return (
-          <div>
-            <h4 key={comment.email}>{comment.email}</h4>
-            <p key={comment.body}>{comment.body}</p>
+          <div key={comment.id}>
+            <h4>{comment.email}</h4>
+            <p>{comment.body}</p>
           </div>
         );
       })}

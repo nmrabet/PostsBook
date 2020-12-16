@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {Link} from 'react-router-dom';
-import {IAlbums} from '../types/albums';
+import { Link } from "react-router-dom";
+import { IAlbums } from "../types/albums";
 
 export default function Albums() {
   const [albums, setAlbums] = useState<IAlbums[]>([]);
@@ -16,15 +16,17 @@ export default function Albums() {
   }, [url]);
 
   return (
-      <div className='albums-component'>
-        <h2 className='subtitle'> Albums </h2>
-          {albums.map((album) => {
-              return (<div>
-                  <Link to={`/albums/${album.id}`}>
-              <h3 key={album.userId}>{album.title}</h3>
+    <div className='albums-component'>
+      <h2 className='subtitle'> Albums </h2>
+      {albums.map((album) => {
+        return (
+          <div key={album.userId}>
+            <Link to={`/albums/${album.id}`}>
+              <h3>{album.title}</h3>
             </Link>
-              </div>)
-          })}
-      </div>
-  )
+          </div>
+        );
+      })}
+    </div>
+  );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./profile.css";
 import userphoto from "../assets/userphoto.jpg";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   return (
@@ -9,10 +9,14 @@ export default function Profile() {
       <div className='navbar'>
         <ul className='nav-list'>
           <li>Home</li>
-          <Link to='/posts' className='links'><li>Posts</li></Link>
+          <Link to='/posts' className='links'>
+            <li>Posts</li>
+          </Link>
           <li>Friends</li>
           <li>Todos</li>
-          <Link to='/albums' className='links'><li>Albums</li></Link>
+          <Link to='/albums' className='links'>
+            <li>Albums</li>
+          </Link>
         </ul>
       </div>
       <div className='profile'>
