@@ -13,7 +13,7 @@ export default function Posts() {
       const res = await fetch(url);
       const data = await res.json();
       setPosts(data);
-    }, 5000);
+    }, 1000);
   });
 
   return (
