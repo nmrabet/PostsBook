@@ -9,6 +9,7 @@ import Albums from "./components/Albums";
 import AlbumsDetails from "./components/AlbumsDetails";
 import Todos from './components/Todos';
 import Users from './components/Users';
+import Photos from './components/Photos';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Profile}/>
           <Route path='/albums/:userId' component={AlbumsDetails} />
+          <Route path='/albums/:albumId' component={Photos}/>
           <Route path='/albums' component={Albums}/>
           <Route path='/posts/:postId' component={PostDetails} />
           <Route path='/posts' component={Posts} />
