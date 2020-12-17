@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './todos.css';
-import {ITodo} from '../types/todo';
+import {ITodo} from 'types';
 
 export default function Todos() {
   const [todos, setTodos] = useState<ITodo[]>([]);

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { IAlbum } from "../types/album";
-import { IPhoto } from "../types/photo";
+import { IAlbum, IPhoto } from "types";
 
 export default function AlbumsDetails() {
   const albumParams = useParams<{ id: string }>();

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { IAlbum } from "../types/album";
+import { IAlbum } from "types";
 
 export default function Albums() {
   const [albums, setAlbums] = useState<IAlbum[]>([]);

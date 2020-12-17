@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Comment } from "../types/comment";
+import { Comment } from "types";
 import { useParams } from "react-router-dom";
 
 export default function PostDetails() {

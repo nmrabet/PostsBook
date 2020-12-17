@@ -9,7 +9,6 @@ import Albums from "./components/Albums";
 import AlbumsDetails from "./components/AlbumsDetails";
 import Todos from "./components/Todos";
 import Users from "./components/Users";
-import Photos from "./components/Photos";
 
 function App() {
   return (
