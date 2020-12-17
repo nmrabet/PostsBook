@@ -18,6 +18,7 @@ export default function Todos() {
 
   return (
     <div className='todos'>
+      <h2 className='subtitle'>Todos</h2>
       {todos.map((todo) => {
         return (
           <div key={todo.id} className='todos-container'>
