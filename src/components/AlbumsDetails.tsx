@@ -33,7 +33,7 @@ export default function AlbumsDetails() {
 
   return (
     <div className='albums-details'>
-      <h2>{albumTitle}</h2>
+      <h2 style={{ textAlign: "center" }}>{albumTitle}</h2>
       <div className='photos'>
         {photos.map((photo) => {
           return (
