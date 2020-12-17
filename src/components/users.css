@@ -1,0 +1,7 @@
+.user-container *{
+    margin: 0;
+}
+
+.user-container {
+    margin-bottom: 3em;
+}
