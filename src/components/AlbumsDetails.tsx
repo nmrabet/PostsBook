@@ -12,26 +12,23 @@ export default function AlbumsDetails() {
   const url = "https://jsonplaceholder.typicode.com/albums/" + albumParams.id;
   console.log(url);
 
-  useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data: IAlbum) => {
-        console.log(data);
-        setAlbum(data);
-      });
-  }, [url]);
-
   const photosUrl =
     "https://jsonplaceholder.typicode.com/photos?albumId=" + albumParams.id;
 
   useEffect(() => {
-    fetch(photosUrl)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setPhotos(data);
+    const albumPromise = fetch(url);
+    const photosPromise = fetch(photosUrl);
+
+    Promise.all([albumPromise, photosPromise]).then((values) => {
+      const albumDataPromise = values[0].json();
+      const photosDataPromise = values[1].json();
+
+      Promise.all([albumDataPromise, photosDataPromise]).then((dataValues) => {
+        setAlbum(dataValues[0]);
+        setPhotos(dataValues[1]);
       });
-  }, [photosUrl]);
+    });
+  });
 
   const albumTitle = album === null ? "Loading..." : album.title;
 

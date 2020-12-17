@@ -16,6 +16,8 @@ export default function PostDetails() {
     fetch(url)
       .then((res) => res.json())
       .then((data: Comment[]) => setComments(data));
+
+      
   }, [url]);
 
   return (
