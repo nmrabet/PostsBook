@@ -1,0 +1,8 @@
+.todos-container {
+    padding-bottom: 0.5em;
+}
+
+.todo-title {
+    display: inline-block;
+    padding-left: 0.5em;
+}

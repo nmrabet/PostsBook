@@ -13,7 +13,7 @@ export default function Profile() {
             <li>Posts</li>
           </Link>
           <li>Friends</li>
-          <li>Todos</li>
+          <Link to='/todos' className='links'><li>Todos</li></Link>
           <Link to='/albums' className='links'>
             <li>Albums</li>
           </Link>

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {Link} from 'react-router-dom';
 import Albums from "./components/Albums";
 import AlbumsDetails from "./components/AlbumsDetails";
+import Todos from './components/Todos';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/albums' component={Albums}/>
           <Route path='/posts/:postId' component={PostDetails} />
           <Route path='/posts' component={Posts} />
+          <Route path='/todos' component={Todos} />
         </Switch>
       </Router>
     </div>
