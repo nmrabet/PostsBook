@@ -19,7 +19,7 @@ function App() {
         </Link>
         <div className='navbar'>
           <ul className='nav-list'>
-            <li>Home</li>
+            <Link to='/' className='links'><li>Home</li></Link>
             <Link to='/posts' className='links'>
               <li>Posts</li>
             </Link>
