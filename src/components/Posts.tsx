@@ -9,11 +9,9 @@ export default function Posts() {
   const url = "https://jsonplaceholder.typicode.com/posts";
 
   useEffect(() => {
-    setTimeout(async () => {
-      const res = await fetch(url);
-      const data = await res.json();
-      setPosts(data);
-    }, 1000);
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setPosts(data));
   });
 
   return (
@@ -21,7 +19,7 @@ export default function Posts() {
       <h2 className='subtitle'> Posts </h2>
       {posts.map((post) => {
         return (
-          <div key={post.userId}>
+          <div key={post.id}>
             <Link to={`/posts/${post.id}`}>
               <h3>{post.title}</h3>
             </Link>

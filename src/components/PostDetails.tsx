@@ -4,21 +4,18 @@ import { useParams } from "react-router-dom";
 
 export default function PostDetails() {
   const params = useParams<{ postId: string }>();
-  console.log(params);
 
   const [comments, setComments] = useState<Comment[]>([]);
 
   const url =
     "https://jsonplaceholder.typicode.com/comments?postId=" + params.postId;
 
-  console.log(url);
+  console.log("Render");
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((data: Comment[]) => {
-        setComments(data);
-      });
+      .then((data: Comment[]) => setComments(data));
   }, [url]);
 
   return (

@@ -18,15 +18,13 @@ export default function Albums() {
   return (
     <div className='albums-component'>
       <h2 className='subtitle'> Albums </h2>
-      {albums.map((album) => {
-        return (
-          <div key={album.userId}>
-            <Link to={`/albums/${album.id}`}>
-              <h3>{album.title}</h3>
-            </Link>
-          </div>
-        );
-      })}
+      {albums.map((album) => (
+        <div key={album.id}>
+          <Link to={`/albums/${album.id}`}>
+            <h3>{album.title}</h3>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }

@@ -14,3 +14,13 @@ body {
 .subtitle {
   text-align: center;
 }
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo {
+  flex-basis: 33.3%;
+  flex-grow: 0;
+}
