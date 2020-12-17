@@ -1,5 +1,5 @@
-export interface IPhotos {
-    albumId: number;
+export interface IAlbum {
+    userId: number;
     id: number;
     title: string;
     url: string;

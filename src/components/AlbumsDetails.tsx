@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { IAlbums } from "../types/albums";
+import { IAlbum } from "../types/album";
 
 export default function AlbumsDetails() {
   const albumParams = useParams<{ id: string }>();
   console.log(albumParams);
 
-  const [photos, setPhotos] = useState<IAlbums[]>([]);
+  const [photos, setPhotos] = useState<IAlbum[]>([]);
 
   const url =
     "https://jsonplaceholder.typicode.com/albums?userId=" + albumParams.id;
@@ -15,7 +15,7 @@ export default function AlbumsDetails() {
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((data: IAlbums[]) => {
+      .then((data: IAlbum[]) => {
         setPhotos(data);
       });
   }, [url]);

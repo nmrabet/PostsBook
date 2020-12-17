@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import { IPhotos } from '../types/photos';
+import { IPhoto } from '../types/photo';
 import { useParams } from 'react-router-dom';
 
 export default function Photos() {
-    const [photos, setPhotos] = useState<IPhotos[]>([]);
+    const [photos, setPhotos] = useState<IPhoto[]>([]);
 
     const photosParams = useParams<{ albumId: string }>();
   console.log(photosParams);
@@ -13,7 +13,7 @@ export default function Photos() {
     useEffect(() => {
         fetch(url)
           .then((response) => response.json())
-          .then((data: IPhotos[]) => {
+          .then((data: IPhoto[]) => {
             setPhotos(data);
           });
       }, [url]);
