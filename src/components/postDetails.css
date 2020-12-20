@@ -1,0 +1,17 @@
+.form {
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.btn {
+    justify-content: flex-end;
+    background-color: #3f51b5;
+    color: #fff;
+    font-weight: 550;
+}
+
+.btn:hover {
+    background-color:goldenrod;
+}

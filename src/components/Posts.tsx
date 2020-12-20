@@ -23,7 +23,6 @@ export default function Posts() {
             <Link to={`/posts/${post.id}`}>
               <h3>{post.title}</h3>
             </Link>
-            <p>{post.body}</p>
           </div>
         );
       })}
