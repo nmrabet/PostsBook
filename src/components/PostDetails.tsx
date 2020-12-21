@@ -14,20 +14,21 @@ export default function PostDetails() {
   const params = useParams<{ postId: string }>();
 
   const [comments, setComments] = useState<Comment[]>([]);
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [post, setPost] = useState();
 
-  const urlPosts = "https://jsonplaceholder.typicode.com/posts";
+  const urlPost = "https://jsonplaceholder.typicode.com/posts/" + params.postId;
 
   const url =
     "https://jsonplaceholder.typicode.com/comments?postId=" + params.postId;
 
-  console.log("Render");
+  
 
   useEffect(() => {
-    fetch(urlPosts)
+    fetch(urlPost)
       .then((res) => res.json())
-      .then((data) => setPosts(data));
-  }, [urlPosts]);
+      .then((data) => {
+        setPost(data)});
+  },);
 
   useEffect(() => {
     fetch(url)
@@ -35,14 +36,11 @@ export default function PostDetails() {
       .then((data: Comment[]) => setComments(data));
   }, [url]);
 
-function filter(id) {
-  return posts.filter((post) => post.id === id)
-}
-let item = filter(1)
-console.log(item)
-
   return (
     <div className='post-details'>
+      <div className='post-content'>
+     
+      </div>
       <div>
       <Form>
       <FormGroup className='form'>
