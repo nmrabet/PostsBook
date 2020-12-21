@@ -29,9 +29,9 @@ export default function PostDetails() {
   return (
     <div className='postDetails'>
       {post && (
-        <div className='post-content'>
+        <div className='post-content' style={{margin: "0 auto",textAlign:'center', width: "60%"}}>
           <h3>{post.title}</h3>
-          <h3>{post.title}</h3>
+          <p>{post.body}</p>
         </div>
       )}
 
