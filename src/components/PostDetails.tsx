@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Comment, Post } from "types";
 import { useParams } from "react-router-dom";
 import "./postDetails.css";
+import Modal from "./Modal";
 
 export default function PostDetails() {
   const params = useParams<{ postId: string }>();
   const [comments, setComments] = useState<Comment[]>([]);
   const [post, setPost] = useState<Post | null>();
-  // const [email, setEmail] = useState('');
-  // const [body, setBody] = useState('');
+  const [show, setShow] = useState(false);
+
+  const closeModalHandler = () => setShow(false);
 
   const urlPost = "https://jsonplaceholder.typicode.com/posts/" + params.postId;
   const url =
@@ -29,12 +31,20 @@ export default function PostDetails() {
   return (
     <div className='postDetails'>
       {post && (
-        <div className='post-content' style={{margin: "0 auto",textAlign:'center', width: "60%"}}>
+        <div
+          className='post-content'
+          style={{ margin: "0 auto", textAlign: "center", width: "60%" }}
+        >
           <h3>{post.title}</h3>
           <p>{post.body}</p>
-          <button className="btn-openModal">Add a comment</button>
         </div>
       )}
+      <div className='modal-container'>
+        <button onClick={() => setShow(true)} className='btn-openModal'>
+          Add a comment
+        </button>
+        <Modal show={show} closeModalHandler={closeModalHandler} />
+      </div>
       <div className='comments'>
         {comments.map((comment) => {
           return (

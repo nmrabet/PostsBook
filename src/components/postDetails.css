@@ -16,9 +16,16 @@
     background-color:goldenrod;
 }
 
+.modal-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
 .btn-openModal {
+    cursor: pointer;
     background-color: #3f51b5;
     color: #fff;
     font-weight: 550;
     padding: 0.5em 1em;
 }
+

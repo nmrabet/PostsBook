@@ -1,8 +1,9 @@
 .modal-wrapper {
   width: 80%;
   max-width: 800px;
-  margin: 4rem auto;
+  margin: 2rem auto;
   border: 1px solid black;
+  transition: all 1.3s ease;
 }
 
 .modal-header {
@@ -25,6 +26,15 @@
   margin: 0.3rem 0.5rem;
 }
 
+.close-modal-btn {
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+}
+
 .cl-btn {
   margin-left: 0.5em;
+  cursor: pointer;
 }

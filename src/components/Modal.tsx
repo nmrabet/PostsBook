@@ -2,13 +2,21 @@ import React from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import "./modal.css";
 
-export default function Modal() {
+export default function Modal({ show, closeModalHandler }) {
   return (
     <div className='modal'>
-      <div className='modal-wrapper'>
+      <div
+        className='modal-wrapper'
+        style={{
+          transform: show ? "translate(0vh)" : "translate(-100vh)",
+          opacity: show ? "1" : "0",
+        }}
+      >
         <div className='modal-header'>
           <p>Leave a comment!</p>
-          <span className='close-modal-btn'>X</span>
+          <span onClick={closeModalHandler} className='close-modal-btn'>
+            X
+          </span>
         </div>
         <div className='modal-content'>
           <Form>
@@ -28,8 +36,12 @@ export default function Modal() {
               ></textarea>
             </FormGroup>
             <div className='btn-container'>
-            <Button type='submit' className='btn'>Submit</Button>
-            <Button className='cl-btn'>Cancel</Button>
+              <Button type='submit' className='btn'>
+                Submit
+              </Button>
+              <Button onClick={closeModalHandler} className='cl-btn'>
+                Close
+              </Button>
             </div>
           </Form>
         </div>
