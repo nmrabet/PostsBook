@@ -32,9 +32,9 @@ export default function PostDetails() {
         <div className='post-content' style={{margin: "0 auto",textAlign:'center', width: "60%"}}>
           <h3>{post.title}</h3>
           <p>{post.body}</p>
+          <button className="btn-openModal">Add a comment</button>
         </div>
       )}
-
       <div className='comments'>
         {comments.map((comment) => {
           return (

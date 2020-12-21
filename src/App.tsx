@@ -9,6 +9,7 @@ import Albums from "./components/Albums";
 import AlbumsDetails from "./components/AlbumsDetails";
 import Todos from "./components/Todos";
 import Users from "./components/Users";
+import Modal from './components/Modal';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path='/posts' component={Posts} />
           <Route path='/todos' component={Todos} />
           <Route path='/users' component={Users} />
+          <Route path='/modal' component={Modal} />
         </Switch>
       </Router>
     </div>

@@ -1,0 +1,30 @@
+.modal-wrapper {
+  width: 80%;
+  max-width: 800px;
+  margin: 4rem auto;
+  border: 1px solid black;
+}
+
+.modal-header {
+  background: #3f51b5;
+  color: #fff;
+  padding: 0 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem 0.5rem;
+}
+
+.btn-container {
+  text-align: end;
+  margin: 0.3rem 0.5rem;
+}
+
+.cl-btn {
+  margin-left: 0.5em;
+}
