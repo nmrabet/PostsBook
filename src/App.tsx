@@ -9,7 +9,6 @@ import Albums from "./components/Albums";
 import AlbumsDetails from "./components/AlbumsDetails";
 import Todos from "./components/Todos";
 import Users from "./components/Users";
-import Modal from './components/Modal';
 
 function App() {
   return (
@@ -20,7 +19,9 @@ function App() {
         </Link>
         <div className='navbar'>
           <ul className='nav-list'>
-            <Link to='/' className='links'><li>Home</li></Link>
+            <Link to='/' className='links'>
+              <li>Home</li>
+            </Link>
             <Link to='/posts' className='links'>
               <li>Posts</li>
             </Link>
@@ -44,7 +45,6 @@ function App() {
           <Route path='/posts' component={Posts} />
           <Route path='/todos' component={Todos} />
           <Route path='/users' component={Users} />
-          <Route path='/modal' component={Modal} />
         </Switch>
       </Router>
     </div>
