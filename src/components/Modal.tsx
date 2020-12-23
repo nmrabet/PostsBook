@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState }  from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import "./modal.css";
 
 export default function Modal({ show, closeModalHandler }) {
+  const [email, setEmail] = useState("");
+  const [text, setText] = useState("");
+
+  function handleChange(e) {
+    setEmail(e.target.value)
+    setText(e.target.value)
+  };
+
+  console.log(email)
   return (
     <div className='modal'>
       <div
@@ -21,19 +30,21 @@ export default function Modal({ show, closeModalHandler }) {
         <div className='modal-content'>
           <Form>
             <FormGroup className='form-container'>
-              <Label>Name</Label>
+              <Label>Email</Label>
               <Input
                 type='text'
-                name='name'
                 placeholder='Enter your Email'
                 required
-              ></Input>
+                value={email}
+                onChange={handleChange}
+              />
               <Label>Comment</Label>
               <textarea
-                name='text'
                 placeholder='Enter text'
                 required
-              ></textarea>
+                value={text}
+                onChange={handleChange}
+              />
             </FormGroup>
             <div className='btn-container'>
               <Button type='submit' className='btn'>
